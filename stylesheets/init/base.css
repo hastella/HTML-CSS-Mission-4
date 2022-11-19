@@ -1,12 +1,23 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-
 body {
   font: 1.6rem/1.15 var(--font-family);
+  height: 100vh;
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: normal;
+}
+header {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  width: 1920px;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -23,6 +34,6 @@ button:disabled {
   cursor: not-allowed;
 }
 
-figure{
+figure {
   margin: 0;
 }
