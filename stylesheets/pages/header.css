@@ -1,6 +1,9 @@
 /* 헤더 */
 header {
+  position: absolute;
+  top: 0;
   width: 1920px;
+  height: 150px;
   border-bottom: 1px solid var(--color-gray-100);
 }
 section {
@@ -8,12 +11,12 @@ section {
   width: 100%;
   height: 34px;
 }
-ul {
+section ul {
   width: 1020px;
   display: flex;
   margin: 0 auto;
 }
-ul > a {
+section ul a {
   width: auto;
   height: 24px;
   font-weight: 400;
@@ -42,7 +45,6 @@ ul a:nth-of-type(5) {
 nav {
   width: 1020px;
   margin: 0 auto;
-  background: var(--color-white);
 }
 .grid-container {
   display: grid;
@@ -61,14 +63,11 @@ nav {
 }
 .item-4 {
   grid-column: 8 / span 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 4;
 }
 .item-5 {
   grid-column: 2 / span 7;
   grid-row: 2;
-}
-.grid-container > [class^="item-"] {
-  text-align: center;
 }
 .item-1 {
   width: 110px;
@@ -149,31 +148,90 @@ input::placeholder {
 }
 .item-4 {
   display: inline-flex;
-  justify-content: center;
-  margin-left: 35px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 120%;
+  margin-left: 33px;
+  margin-top: 30px;
 }
 .item-4 button {
   width: 50px;
   height: 58px;
-  margin-top: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  padding-top: 30px;
 }
-.item-4 button:not(:last-child) {
+.item-4 .myCoupang button {
+  background: url(/assets/icon/my-coupang.svg) no-repeat top center;
+}
+.item-4 .myCoupang button:not(:last-child) {
   margin-right: 13.53px;
 }
-.item-4 .profile-img {
-  background: url(/assets/icon/my-coupang.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
+.myCoupang ul {
+  display: none;
 }
-.item-4 .cart-img {
-  background: url(/assets/icon/cart.svg) no-repeat center;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
+.myCoupang > ul div {
+  width: 49px;
+  height: 14px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.is--active ul {
+  position: relative;
+  right: 20px;
+  display: inline-block;
+  height: 130px;
+  padding: 23.5px 21px 24px 20px;
+  margin-bottom: 5px;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+}
+.is--active ul:after,
+.is--active ul:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.is--active ul:before {
+  border-color: var(--color-opacity);
+  border-bottom-color: var(--color-gray-100);
+  border-width: 7px;
+  margin-left: -7px;
+}
+.is--active ul:after {
+  border-color: var(--color-opacity);
+  border-bottom-color: var(--color-white);
+  border-width: 5px;
+  margin-left: -5px;
+}
+.item-4 .cart {
+  background: url(/assets/icon/cart.svg) no-repeat top center;
+}
+.item-4 .count {
+  position: relative;
+  bottom: 4px;
+  right: 20px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50px;
+  background: var(--color-blue-600);
+}
+.item-4 span {
+  position: relative;
+  bottom: 2.5px;
+  left: 0.5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--color-white);
 }
 .item-5 {
   display: inline-block;
@@ -182,7 +240,7 @@ input::placeholder {
 }
 .item-5 a {
   height: 26px;
-  padding: 0 14px;
+  padding: 6px 14px;
   margin-right: -2px;
   vertical-align: middle;
   font-weight: 400;
