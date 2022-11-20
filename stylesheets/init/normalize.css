@@ -172,7 +172,10 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+button {
+  border: none;
+  background-color: transparent;
+}
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
