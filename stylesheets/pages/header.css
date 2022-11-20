@@ -105,23 +105,23 @@ nav {
   margin: 34px 0 13px 30px;
 }
 .item-3 .custom-select {
-  width: 135px;
   display: inline-flex;
   justify-content: center;
 }
 .custom-select select {
-  width: 95px;
+  width: 135px;
   color: var(--color-gray-700);
   font-weight: 400;
   font-size: 12px;
-  padding-left: 12px;
+  padding: 0 12px 0 15px;
   border: none;
+  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.custom-select svg {
-  position: relative;
-  top: -5px;
+.custom-select select {
+  background: url("/assets/icon/dropdown-arrow.svg") no-repeat right;
+  background-position: 110px;
 }
 .item-3 input {
   width: 301px;
