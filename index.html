@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>헤더 - 쿠팡(Coupang)</title>
-    <link rel="icon" href="/assets/favicon/favicon.png" />
+    <link rel="icon" href="/assets/favicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,31 +32,43 @@
           <div class="btn"></div>
           <div class="text">카테고리</div>
         </button>
-        <div class="item-2">
-          <a href="https://www.coupang.com/" role="tab"></a>
-          <h1 class="sr-only">Coupang</h1>
-        </div>
+        <a href="https://www.coupang.com/" role="tab">
+          <div class="item-2">
+            <h1 class="sr-only">Coupang</h1>
+          </div>
+        </a>
         <form class="item-3">
           <div class="custom-select">
             <select role="dropdown">
               <option value="0">전체</option>
             </select>
           </div>
-          <input type="text" placeholder="찾고 싶은 상품을 검색해 보세요!" />
-          <button class="mic"></button>
-          <button class="search"></button>
+          <input
+            type="search"
+            required
+            placeholder="찾고 싶은 상품을 검색해 보세요!"
+          />
+          <button type="button" value="음성검색" class="mic">
+            <span class="sr-only">음성검색</span>
+          </button>
+          <button type="submit" class="search">
+            <span class="sr-only">키워드검색</span>
+          </button>
         </form>
         <div class="item-4">
           <div class="myCoupang">
             <button>마이쿠팡</button>
             <ul>
-              <div>주문목록</div>
-              <div>취소/반품</div>
-              <div>찜리스트</div>
+              <li><a href="/">주문목록</a></li>
+              <li><a href="/">취소/반품</a></li>
+              <li><a href="/">찜리스트</a></li>
             </ul>
           </div>
           <div class="cart">
             <button>장바구니</button>
+            <div class="cart-msg">
+              <div>장바구니에 담긴 상품이 없습니다.</div>
+            </div>
           </div>
           <div class="count"><span>0</span></div>
         </div>
